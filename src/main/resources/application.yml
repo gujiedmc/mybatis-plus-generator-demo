@@ -1,0 +1,15 @@
+generator:
+  datasource:
+    url: jdbc:mysql://localhost:3306/eshop_local
+    username: root
+    password: Aa123456
+  package-name:
+    base: com.gujiedmc.ehsop
+    module: auth
+  strategy:
+    include: auth_role
+  supper-class:
+    service: ${generator.package-name.base}.service.BaseService
+    service-impl: ${generator.package-name.base}.service.impl.BaseServiceImpl
+    mapper: ${generator.package-name.base}.mapper.BaseMapper
+  author: gujiedmc
